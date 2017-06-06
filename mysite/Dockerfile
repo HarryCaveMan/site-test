@@ -1,7 +1,11 @@
 # Dockerfile
 
 # FROM directive instructing base image to build upon
-FROM python:2-onbuild
+FROM phusion/baseimage
+
+# RUN install python and pip
+RUN apt-get update
+RUN apt-get install -y python python-pip python-dev 
 
 # COPY python reqs into known file
 COPY requirements.txt /usr/src/app/
