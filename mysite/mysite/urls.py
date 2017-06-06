@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from siteapp import views as v
 
 urlpatterns = [
@@ -24,3 +25,4 @@ urlpatterns = [
     url(r'^portfolio',v.portfolio),
     url(r'^resume',v.resume),
 ]
+urlpatterns += staticfiles_urlpatterns()
