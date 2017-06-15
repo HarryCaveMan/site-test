@@ -21,8 +21,11 @@ from siteapp import views as v
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',v.index),
-     url(r'^home',v.index),
+    url(r'^home',v.index),
     url(r'^portfolio',v.portfolio),
     url(r'^resume',v.resume),
+    url(r'^leastsquares',v.leastsquares),
+    url(r'^islandstudy',v.islandstudy),
+    url(r'^primocr',v.primocr),
 ]
 urlpatterns += staticfiles_urlpatterns()
