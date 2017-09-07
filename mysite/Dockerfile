@@ -1,7 +1,10 @@
 # Dockerfile
 
 # FROM base image to build upon
-FROM phusion/baseimage
+FROM phusion/passenger-customizable:0.9.24 
+
+#RUN install python support
+RUN /pd_build/python.sh
 
 # RUN install python and pip
 RUN apt-get update
